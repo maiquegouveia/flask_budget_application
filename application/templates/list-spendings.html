@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+{% block body %}
+    <div class="container mt-3">
+        {% if spendings %}
+            <h1>Spendings</h1>
+            {% for spending in spendings %}
+                <hr>
+                <div class="spending-group my-3">
+                    <a href="{{ url_for('edit_spending', id=spending.id) }}"><p><strong>Title:</strong> {{ spending.title }} <strong>Description:</strong> {{ spending.description }} <strong>Date:</strong> {{ spending.date }} <strong>Installments:</strong> {{ spending.installments }} <strong>Cost:</strong> {{ spending.cost_per_installment }} <strong>Total:</strong> {{ spending.total }}</p></a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <h1>No spendings yet</h1>
+        {% endif %}
+    </div>
+{% endblock %}

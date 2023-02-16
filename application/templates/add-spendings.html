@@ -1,0 +1,42 @@
+{% extends 'main.html' %}
+{% block body %}
+    <div class="container mt-3">
+        <h1>Add Spending</h1>
+        <hr>
+        <form action="" method="post">
+            <div class="form-group">
+                <input type="text" name="title" placeholder="Title" maxlength="50" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="description" placeholder="Description" maxlength="50" required>
+            </div>
+            <div class="form-group">
+                <input type="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <h4>Installments</h4>
+                <input type="radio" name="installment" value="1">1
+                <input type="radio" name="installment" value="2">2
+                <input type="radio" name="installment" value="3">3
+                <input type="radio" name="installment" value="4">4
+                <input type="radio" name="installment" value="5">5
+                <input type="radio" name="installment" value="6">6
+                <input type="radio" name="installment" value="7">7
+                <input type="radio" name="installment" value="8">8
+                <input type="radio" name="installment" value="9">9
+                <input type="radio" name="installment" value="10">10
+                <input type="radio" name="installment" value="11">11
+                <input type="radio" name="installment" value="12">12
+            </div>
+            <div class="form-group">
+                <h4>Cost</h4>
+                <input type="text" name="cost">
+            </div>
+            <div class="form-group">
+                <h4>Total</h4>
+                <input type="text" name="total">
+            </div>
+            <input type="submit" value="Submit" class="btn btn-primary">
+        </form>
+    </div>
+{% endblock %}

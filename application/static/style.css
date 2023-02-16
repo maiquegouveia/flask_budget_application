@@ -1,0 +1,14 @@
+.spending-group strong{
+    padding-left: .3rem;
+}
+
+.spending-group a{
+    text-decoration: none;
+    color: black;
+}
+
+.installments{
+    padding: .3rem;
+    border: 1px solid black;
+    margin-bottom: .5rem;
+}

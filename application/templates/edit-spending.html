@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+{% block body %}
+    <div class="container mt-3">
+        <h1>{{ spending.title }}</h1>
+        <h5>{{ spending.date }}</h5>
+        <p>{{ spending.description }}</p>
+        {% if spending.installments > 1 %}
+            <hr>
+            {% for installment in range(spending.installments) %}  
+                <div class="installments">
+                    <span>{{ installment+1 }} Installment Payment</span>
+                    <span>/ R$ {{ spending.cost_per_installment }}</span>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}
