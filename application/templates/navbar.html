@@ -1,14 +1,14 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-success">
     <div class="container">
-      <a class="navbar-brand" href="{{ url_for ('homepage') }}">myBudget</a>
+      <a class="navbar-brand text-light" href="{{ url_for ('homepage') }}">myBudget</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="{{ url_for ('homepage') }}">Home</a>
-          <a class="nav-link" href="{{ url_for('add_spendings') }}">Add Spendings</a>
-          <a class="nav-link" href="{{ url_for ('list_spendings') }}">List Spendings</a>
+          <a class="nav-link active text-light" aria-current="page" href="{{ url_for ('homepage') }}">Home</a>
+          <a class="nav-link text-light" href="{{ url_for('add_spendings') }}">Add Spendings</a>
+          <a class="nav-link text-light" href="{{ url_for ('list_spendings') }}">View Spendings</a>
         </div>
       </div>
     </div>

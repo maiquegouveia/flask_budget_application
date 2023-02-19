@@ -4,12 +4,18 @@
         <h1>{{ spending.title }}</h1>
         <h5>{{ spending.date }}</h5>
         <p>{{ spending.description }}</p>
-        {% if spending.installments > 1 %}
+        {% if installments %}
             <hr>
-            {% for installment in range(spending.installments) %}  
+            {% for installment in installments %}  
                 <div class="installments">
-                    <span>{{ installment+1 }} Installment Payment</span>
-                    <span>/ R$ {{ spending.cost_per_installment }}</span>
+                    <span>{{ installment.num }} Installment Payment</span>
+                    <span>/ R$ {{ installment.spending.cost_per_installment }}</span>
+                    {% if installment.paid == False %}
+                        <a href="{{ url_for('pay_installment', id_s=installment.spending.id, id_i=installment.id) }}"><span class="mx-3">Pay</span></a>
+                    {% else %}
+                        <span class="mx-3">Paid</span>
+                        <span class="mx-3">{{ installment.date }}</span>
+                    {% endif %}
                 </div>
             {% endfor %}
         {% endif %}
